@@ -7,7 +7,7 @@ export function Layout() {
   return (
     <Container>
       <Header>
-        <Link to="/home">
+        <Link to="/">
           <img src={logo} alt="Marvel Logo"  />
         </Link>
       </Header>
