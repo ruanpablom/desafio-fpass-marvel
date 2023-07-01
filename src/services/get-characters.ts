@@ -15,7 +15,7 @@ export function useGetCharacters(): UseGetCharactersResponse {
     try{
       const ts = Number(new Date());
       const hash = Md5.hashStr(ts + import.meta.env.VITE_API_PRIVATE_KEY + import.meta.env.VITE_API_PUBLIC_KEY);
-      const { data: result } = await baseService.get<CharacterDataWrapper>(`/characters?ts=${ts}&apikey=${import.meta.env.VITE_API_PUBLIC_KEY}&hash=${hash}${nameStartsWith ? `&nameStartsWith=${nameStartsWith}`:''}&offset=${offset}&limit=${limit}`);
+      const { data: result } = await baseService.get<CharacterDataWrapper>(`/characters?ts=${ts}&apikey=${import.meta.env.VITE_API_PUBLIC_KEY}&hash=${hash}${nameStartsWith ? `&nameStartsWith=${nameStartsWith}`:''}${offset ? `&offset=${offset}`:''}${limit ? `&limit=${limit}`:''}`);
 
       return result.data || null
     }catch (err) {
