@@ -13,7 +13,9 @@
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
 
+  --bg-primary: #242424;
   --bg-red: #EC1D24;
+  --bg-secondary: #3b3b3b;
 }
 
 body {

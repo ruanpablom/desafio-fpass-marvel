@@ -4,27 +4,52 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  background-color: #3b3b3b;
   border-radius: 0.2rem;
   align-items: center;
-  max-width: 11rem;
-  min-height: 25rem;
+  width: 10rem;
+  position: relative;
+  background: linear-gradient(to bottom, var(--bg-secondary) 0%, var(--bg-secondary) 50%, var(--bg-red) 50%, var(--bg-red) 100%);
+  background-size: 100% 200%;
+  background-position: 0% 0%;
+  transition: background-position 350ms ease;
 
   &:hover {
     background-position: 0% -100%;
     cursor: pointer;
-    transform: scale(1.1);
     transition: 350ms;
-    box-shadow: 0 6px 6px 4px var(--shadow);
+  }
+
+`;
+
+export const Body = styled.div`
+  width: 100%;
+  min-height: 10rem;
+
+  &::after{
+    border-bottom-color: var(--bg-primary);
+    border-left-color: var(--bg-primary);
+    border-right-color: var(--bg-primary);
+    border-style: solid;
+    border-top-color: rgba(0,0,0,0);
+    border-width: 12px 12px 0 0;
+    bottom: 0;
+    content: "";
+    position: absolute;
+    right: 0;
+    top: auto;
+    z-index: 40;
   }
 `;
 
 export const Thumb = styled.img`
+  width: inherit;
+  border-bottom: 0.5rem solid var(--bg-red);
 `
 
 export const Name = styled.h2`
   color: #FEFEFE;
+  text-transform: uppercase;
   margin: 0;
-  font-size: 1.4rem;
-  padding:1rem;
+  font-size: 1rem;
+  padding: 1rem;
 `
