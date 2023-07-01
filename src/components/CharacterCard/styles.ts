@@ -9,7 +9,7 @@ export const Container = styled.a`
   align-items: center;
   width: 10rem;
   position: relative;
-  background: linear-gradient(to bottom, var(--bg-secondary) 0%, var(--bg-secondary) 50%, var(--bg-red) 50%, var(--bg-red) 100%);
+  background: linear-gradient(to bottom, var(--bg-secondary) 0%, var(--bg-secondary) 50%, var(--red) 50%, var(--red) 100%);
   background-size: 100% 200%;
   background-position: 0% 0%;
   transition: background-position 350ms ease;
@@ -44,7 +44,7 @@ export const Body = styled.div`
 
 export const Thumb = styled.img`
   width: inherit;
-  border-bottom: 0.5rem solid var(--bg-red);
+  border-bottom: 0.5rem solid var(--red);
 `
 
 export const Name = styled.h2`

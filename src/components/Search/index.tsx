@@ -13,7 +13,7 @@ export function Search({onSearch}: SearchProps): JSX.Element {
     <Container>
       <SearchInput id="input-search" type="text" placeholder="Nome do herói" ref={searchInputRef} />
       <button onClick={() => onSearch(searchInputRef.current ? searchInputRef.current.value : ' ' , 0, 20)}>
-        <SearchIcon size={28}/>
+        <SearchIcon size={24}/>
       </button>
     </Container>
   )

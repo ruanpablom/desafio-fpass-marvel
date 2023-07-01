@@ -4,6 +4,7 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   width: 100vw;
+  align-items: center;
 `;
 
 export const Header = styled.header`
@@ -14,5 +15,6 @@ export const Header = styled.header`
 
 export const Content = styled.section`
   display: flex;
+  width: calc(100% - 4rem);
   padding: 0rem 2rem;
 `;
