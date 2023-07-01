@@ -1,8 +1,9 @@
 import { styled } from "styled-components";
 
-export const Container = styled.div`
+export const Container = styled.a`
   display: flex;
   flex-direction: column;
+  text-decoration: none;
   gap: 1rem;
   border-radius: 0.2rem;
   align-items: center;

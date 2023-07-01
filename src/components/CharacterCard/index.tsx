@@ -5,9 +5,10 @@ interface CharacterCardProps {
   character: Character
 }
 export function CharacterCard({character}:CharacterCardProps): JSX.Element {
-  const {name, thumbnail} = character;
+  const {name, thumbnail, id} = character;
+
   return (
-    <Container>
+    <Container href={`/character/${id}`}>
       <Thumb src={`${thumbnail?.path}/portrait_fantastic.${thumbnail?.extension}`} alt={`${name} thumb`} />
       <Body>
         <Name>{name}</Name>
