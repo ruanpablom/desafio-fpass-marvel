@@ -8,12 +8,10 @@ import { CharactersList } from "@/components/CharactersList";
 export function Home():JSX.Element {
   const [getCharacters] = useGetCharacters();
   const [charactersResult,setCharactersResult] = useState<CharacterDataContainer | null>({});
-  const [searchString, setSearchString] = useState<string>(' ')
 
   const handleSearch = (nameStartsWith: string, offset?: number, limit?:number) => {
     getCharacters(nameStartsWith,offset,limit).then(result => {
       setCharactersResult(result);
-      setSearchString(nameStartsWith);
     });
   }
 
